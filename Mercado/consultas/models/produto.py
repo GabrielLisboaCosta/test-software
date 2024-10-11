@@ -28,12 +28,12 @@ def listar_produtos():
 def buscar_produto_nome(nome):
     produtos = Produto.objects.filter(nome__icontains=nome)
     for produto in produtos:
-        print(f"ID: {produto.id}, Nome: {produto.nome}, Preço: {produto.preco}, Estoque: {produto.estoque}")
+        print(f"Codigo: {produto.codigo}, Nome: {produto.nome}, Preço: {produto.preco}, Estoque: {produto.estoque}")
 
 def buscar_produto_tipo(tipo):
     produtos = Produto.objects.filter(tipo__icontains=tipo)
     for produto in produtos:
-        print(f"ID: {produto.id}, Nome: {produto.nome}, Preço: {produto.preco}, Estoque: {produto.estoque}")
+        print(f"Codigo: {produto.codigo}, Nome: {produto.nome}, Preço: {produto.preco}, Estoque: {produto.estoque}")
 
 def cadastrar_produto(nome, preco, estoque, tipo):
     produto = Produto(nome=nome, preco=preco, estoque=estoque, tipo=tipo)
